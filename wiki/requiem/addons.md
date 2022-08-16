@@ -1,6 +1,6 @@
 ---
-title: Requiem Addons
-breadcrumb: Addons
+title: 安魂曲附加包
+breadcrumb: 附加包
 layout: requiem_wiki
 ---
 
