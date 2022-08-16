@@ -35,7 +35,7 @@ layout: requiem_wiki
 [`requiem:startingRemnantType`](configuration#requiem-startingremnanttype) 游戏规则设为`选择`时出现。
 
 ### 目标选择器参数
-安魂曲也添加了一个新的[目标选择器参数](https://minecraft.fandom.com/zh/wiki/%E7%9B%AE%E6%A0%87%E9%80%89%E6%8B%A9%E5%99%A8#%E7%9B%AE%E6%A0%87%E9%80%89%E6%8B%A9%E5%99%A8%E5%8F%82%E6%95%B0)————`"requiem:possessor"`.
+安魂曲也添加了一个新的[目标选择器参数](https://minecraft.fandom.com/zh/wiki/%E7%9B%AE%E6%A0%87%E9%80%89%E6%8B%A9%E5%99%A8#%E7%9B%AE%E6%A0%87%E9%80%89%E6%8B%A9%E5%99%A8%E5%8F%82%E6%95%B0)——`"requiem:possessor"`.
 任何可以针对实体的命令都可以使用此参数根据其附身者选择实体。
 该参数使用附身者的名字或空字符串来匹配未被附身的实体。
 可以通过在前面加上`'!'`字符来取反。
