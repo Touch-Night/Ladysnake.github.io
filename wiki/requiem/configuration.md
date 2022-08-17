@@ -1,64 +1,65 @@
 ---
-title: Requiem Configuration
-breadcrumb: Configuration
+title: 安魂曲配置
+breadcrumb: 配置
 layout: requiem_wiki
 datapack_editor: true
 ---
-## Gamerules
+## 游戏规则
 
-Requiem adds a few gamerules to help customize a server's gameplay:
+安魂曲添加了一些游戏规则用以自定义服务器的游戏玩法：
 
 {%include gamerule_list.liquid modid="requiem" gamerules=site.data.requiem.gamerules%}
 
 <div class="gamerule-export hidden"><!--No JS === no export-->
-<button id="gamerule-export-btn" class="btn btn-info btn-lg">Export to datapack</button>
+<button id="gamerule-export-btn" class="btn btn-info btn-lg">导出至数据包</button>
 <p id="gamerule-export-log" class="lead"></p>
 </div>
 
-## Datapacks
+## 数据包
 
-### Tags
-The lists below represent a file tree taking root in the `tags` directory of a datapack.
+### 标签
+下面的列表表示在数据包中以`tags`目录为根目录的文件目录树。
 
-**New: Edit tags directly in this section by clicking on the 📝 buttons, then click "Export" at the end to generate your datapack!**
+**新增功能：在这部分通过点击📝按钮来直接编辑标签，然后在末尾点击“导出”来生成你的数据包！**
 
-*Checking "Replace Existing" deletes default values.*
+*勾选“替换现有”会删除默认值。*
 
-#### Blocks
+#### 方块
 
 {%include tag_list.liquid type="block" modid="requiem" tags=site.data.requiem.block_tags%}
 
-#### Biomes
+#### 生物群系
 {%include tag_list.liquid type="biome" folder="worldgen/biome" modid="requiem" tags=site.data.requiem.biome_tags%}
 
-#### Entity Types
-Most entity type tags control aspects of possession.
+#### 实体类型
+大多数实体类型标签控制着附身的各个方面。
 
 {%include tag_list.liquid type="entity_type" modid="requiem" tags=site.data.requiem.entity_type_tags%}
 
-#### Items
+#### 物品
 
 {%include tag_list.liquid type="item" modid="requiem" tags=site.data.requiem.item_tags%}
 
 <div class="tag-export hidden"><!--No JS === no export-->
-<button id="export-btn" class="btn btn-info btn-lg">Export to datapack</button>
+<button id="export-btn" class="btn btn-info btn-lg">导出至数据包</button>
 <p id="export-log" class="lead"></p>
 </div>
 
-### Loot Tables
+### 战利品表
 
-Requiem adds the ability to configure what loot a player gets when first possessing a mob by adding loot table files to 
-`<namespace>:loot_tables/requiem/possession/<mob_id>.json`. Those loot tables must have the `requiem:possession` type.
-For examples, see [possession loot tables for vanilla mobs](https://github.com/Ladysnake/Requiem/tree/1.16/src/main/resources/data/minecraft/loot_tables/requiem/possession).
+安魂曲添加了通过将战利品表文件添加到`<namespace>:loot_tables/requiem/possession/<mob_id>.json`来配置玩家在第一次附身生物时获得的战利品的功能。
+这些战利品表必须具有`requiem:possession`类型。
+例如，参见[原版生物的战利品表](https://github.com/Ladysnake/Requiem/tree/1.19/src/main/resources/data/minecraft/loot_tables/requiem/possession).
 
-Loot table generator: [https://minecraft.tools/en/loots.php](https://minecraft.tools/en/loots.php)
+战利品表生成器：<br>[[英文]https://minecraft.tools/en/loots.php](https://minecraft.tools/en/loots.php)
+<br>[[中文]https://mc.metamo.cn/tool/loottable/](https://mc.metamo.cn/tool/loottable/)
 
 
-### Changes to Predicates
+### 战利品表谓词的变化
 
-To support more functionality in the following systems, Requiems adds its own predicates to vanilla ones.
+为了支持以下系统中的更多功能，安魂曲将自己的战利品表谓词添加到原版的战利品表谓词中。
 
-#### Entity Predicates
+#### 实体战利品表谓词
 
 - `requiem:can_be_cured`: can be `true` or `false`. If left unspecified, will not affect the predicate in any way. If `true`, only entities that are possessed and can currently be cured will be matched. If `false`, only entities that *cannot* be cured will be matched.
 - `requiem:health_fraction`: a float range between 0 and 1, that will be applied to the quotient of the current health over the entity's max health.
