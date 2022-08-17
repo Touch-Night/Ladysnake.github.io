@@ -61,12 +61,12 @@ datapack_editor: true
 
 #### 实体战利品表谓词
 
-- `requiem:can_be_cured`: can be `true` or `false`. If left unspecified, will not affect the predicate in any way. If `true`, only entities that are possessed and can currently be cured will be matched. If `false`, only entities that *cannot* be cured will be matched.
-- `requiem:health_fraction`: a float range between 0 and 1, that will be applied to the quotient of the current health over the entity's max health.
+- `requiem:can_be_cured`：可以为`true`或者`false`。如果未指定，则不会以任何方式影响战利品表谓词。如果为`true`，只有被附身且当前可以治愈的实体才会匹配。如果为`false`，只有*无法*被治愈的实体才会匹配。
+- `requiem:health_fraction`：一个介于0和1之间的浮点数，将应用于当前生命值与实体最大生命值的商。
 
-#### Item Predicates
+#### 物品战利品表谓词
 
-- `requiem:food`: a JSON object representing a food component predicate. If left unspecified, will not affect the item predicate in any way. Otherwise, will only match food items. All attributes below are ignored if left unspecified.
+- `requiem:food`：一个表示食物成分战利品表谓词的JSON对象。如果未指定，则不会以任何方式影响物品战利品表谓词。否则，只会匹配食物物品。如果未指定，则忽略以下所有属性。
   - `hunger`: an int range for the food's hunger value
   - `saturation_modifier`: a float range for the food's saturation modifier
   - `meat`: a boolean compared with the food's `meat` attribute
